@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Resume</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        ul {
+            font-size: 20px;
+        }
+
+        .details {
+            font-size: 20px;
+        }
+
+        .bold {
+            font-weight: 550;
+        }
+
+        .grey {
+            color: grey;
+            font-weight: 500;
+        }
+
+        .title {
+            font-size: 26px;
+            margin-top: 25px;
+            margin-bottom: 22px;
+            font-weight: 400;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        header {
+            padding: 20px;
+            padding-left: 50px;
+            padding-top: 25px;
+            background-color: rgb(2, 16, 51);
+            color: rgb(230, 220, 220);
+            height: 140px;
+        }
+
+        header h1.name {
+            margin-bottom: 10px;
+            font-size: 45px;
+        }
+
+        .container {
+            min-height: calc(100vh - 123px) !important;
+            padding: 20px 50px;
+            margin-top: 25px;
+        }
+
+        .sections {
+            display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: flex;
+            -webkit-box-pack: space-between; /* wkhtmltopdf uses this one */
+            justify-content: space-between;
+        }
+
+        .sections > .left-section {
+            width: 70%;
+            padding-right: 40px;
+        }
+
+        .sections > .right-section {
+            border-left: 2px solid rgba(128, 128, 128, 0.275);
+            padding-left: 40px;
+            width: 30%;
+        }
+
+        .left-section .education {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.275);
+            padding-bottom: 30px;
+        }
+
+        .left-section .profile {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.275);
+            border-right: none;
+            padding-bottom: 30px;
+        }
+
+        .left-section .skills {
+            display: -webkit-box; /* wkhtmltopdf uses this one */
+            /* -webkit-box-pack: space-between;  */
+            /* justify-content: space-between; */
+            /* width: 50%; */
+        }
+
+        .left-section .degree {
+            display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: flex;
+            -webkit-box-pack: space-between;  
+            justify-content: space-between;
+
+        }
+
+        ul.left-skills-list
+        {
+            list-style-type: none;
+            -webkit-box-flex: 2;
+            margin-right: 200px;
+        }
+
+        ul.right-skills-list
+        {
+            list-style-type: none;
+            -webkit-box-flex: 1;
+        }
+
+        .skills ul li.skill-item:not(:last-child) { 
+            margin-bottom: 10px;  
+        }
+
+        .right-section .personal-details .detail {
+            margin-bottom: 13px;
+        }
+
+        .right-section .personal-details {
+            border: none;
+            /* border-bottom: 2px solid rgba(128, 128, 128, 0.275); */
+            padding-bottom: 20px;
+        }
+
+        .right-section .languages {
+            /* border-bottom: 2px solid rgba(128, 128, 128, 0.275); */
+            padding-bottom: 20px;
+        }
+
+        .right-section .languages .languages-list {
+            list-style-type: none;
+        }
+
+        .right-section .qualities .qualities-list {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .right-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .year-of-graduation {
+            margin-left: 40px;
+        }
+
+        .footer{
+            font-size: 14px;
+            margin-top: 300px;
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="name">Eimantas Melnikas</h1>
+        <p class="details"><i class="fa fa-envelope" style="color: grey;"></i> eimantasmel@gmail.com  &nbsp;
+           <i class="fa fa-map-marker" aria-hidden="true" style="color: grey;"></i> Kaunas</p>
+    </header>
+
+    <div class="container">
+        <div class="sections">
+            <div class="left-section">
+                <div class="education">
+                    <h3 class='title'>Education</h3>
+                    <div class="degree">
+                        <p class="bold">Bachelor's degree, Information system</p> 
+                        <p class="year-of-graduation">Sep 2018 - Jun 2022</p>
+                    </div>
+                    <p class="grey">Kaunas University Of Technology, Kaunas</p>
+                    <p><b>Specialization: </b>Internet Information Systems and Databases Programming</p>
+                </div>
+            
+                <div class="education">
+                    <h3 class='title'>Work Experience</h3>
+                    <div class="degree">
+                        <div style="width: 75%">
+                            <p><b>Job Title: </b>Web Developer</p> 
+                            <p><b>Company Name: </b>UAB Magnus IC</p> 
+                            <p><b>Location: </b>Lithuania, Kaunas</p> 
+                            <p><b>Key Responsibilities: </b>Developed and maintained web applications using PHP and Symfony.</p> 
+
+                        </div>
+                        <p class="year-of-graduation">Aug 2022 - May 2023</p>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <h3 class='title'>Profile</h3> 
+                    <p>
+                        Currently, I am seeking a position primarily as a web developer. I have acquired a strong understanding of data 
+                        acquisition, storage, processing, transmission principles, and data management technologies. I possess the knowledge, 
+                        practical skills, and abilities necessary for developing and administering information systems and databases, 
+                        programming, and implementing internet access to stored data and web service-based architectures, as well as organizing 
+                        teamwork. I am capable of analyzing and understanding project needs, determining and specifying system and user 
+                        requirements, and designing, testing, and implementing software components.
+                        <br><br>
+                        With a Bachelor's degree in Information Systems from Kaunas University of Technology, specializing in Internet 
+                        Information Systems and Database Programming, I possess a solid foundation in this field. My experience with the software 
+                        development lifecycle equips me to quickly adapt to the specific requirements of your role. As a software developer, I 
+                        recognize the value of the Agile software development manifesto's values on the right side of each principle, even though 
+                        the left side is prioritized:
+                        <br>
+                        "Individuals and interactions over processes and tools
+                        Working software over comprehensive documentation
+                        Customer collaboration over contract negotiation
+                        Responding to change over following a plan."
+                        <br><br>
+                        — Agile Manifesto
+                        <br><br>
+                        One of my key principles is maintaining a strong work ethic and a continual curiosity for learning. I prioritize creating 
+                        an environment where making mistakes is acceptable, provided that they are identified and learned from.
+                        <br><br>
+                        <b>Hobbies:</b>
+                        <br>
+                        Analyzing stock market trends to enhance analytical and data interpretation skills
+                        Playing strategic poker to develop decision-making and problem-solving abilities
+                        Participating in soccer to foster teamwork and collaborative skills
+                        <br><br><br>
+
+                        Here I am adding links to my presentational projects in both ASP.NET Core and Symfony:
+                        <br>
+                        ASP.NET Core: https://github.com/eimantasmel/DOTNET_RapidNoteFinder
+                        Symfony: https://github.com/eimantasmel/RapidNoteFinder
+                        <br><br>
+                        <b>LinkedIn Profile: </b>[Your LinkedIn URL]
+
+                    </p>
+                </div>
+                <div>
+                    <h3 class='title'>Skills</h3> 
+                    <div class="skills">
+                        <ul class="right-skills-list">
+                            <li class="skill-item"><b>Programming languages: </b>C#, JavaScript, PHP</li>
+                            <li class="skill-item"><b>Frameworks/Libraries: </b>.NET, Symfony, React</li>
+                            <li class="skill-item"><b>DBMS: </b>SQL Server, MySQL, Redis, PostgreSQL, Oracle</li>
+                            <li class="skill-item"><b>Tools: </b>Docker, Git</li>
+                            <li class="skill-item"><b>CMS: </b>PrestaShop</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <p class="footer">I consent to the processing of my personal data for the purpose of recruitment for the position I am applying</p>
+
+            </div>
+            <div class="right-section">
+                <div class="personal-details">
+                    <h3 class='title'>Personal details</h3> 
+                    <div class="detail">
+                        <p class="grey">Date of birth</p>
+                        <p>October 21st, 1999</p>
+                    </div>
+                    <div class="detail">
+                        <p class="grey">Gender</p>
+                        <p>Male</p>
+                    </div>
+                    <div class="detail">
+                        <p class="grey">Nationality</p>
+                        <p>Lithuanian</p>
+                    </div>
+            
+                </div>
+                <div class="languages">
+                    <h3 class='title'>Languages</h3> 
+                    <ul class="languages-list">
+                        <li>Lithuanian</li>
+                        <li>English</li>
+                    </ul>
+                </div>
+                <div class="qualities">
+                    <h3 class='title'>Qualities</h3> 
+                    <ul class="qualities-list">
+                        <li>Strong Work Ethic</li>
+                        <li>Curiosity</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

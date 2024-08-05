@@ -8,12 +8,19 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Resume</title>
     <style>
+        body {
+            width: 100vw;
+        }
         *{
             box-sizing: border-box;
             padding: 0;
             margin: 0;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        /* header .details .segment {
+            display: inline;
+        } */
 
         p{
             font-size: 20px;
@@ -36,6 +43,10 @@
             font-weight: 500;
         }
 
+        .hidden {
+            display: none;
+        }
+
         .title {
             font-size: 26px;
             margin-top: 25px;
@@ -54,6 +65,7 @@
             background-color: rgb(2, 16, 51);
             color: rgb(230, 220, 220);
             height: 140px;
+            width: 100%;
         }
 
         header h1.name {
@@ -167,13 +179,69 @@
             height: 60px;
             padding: 10px;
         }
+
+        @media screen and (max-width: 1478px) {
+            .sections {
+            display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: block;
+            }
+
+            .sections > .left-section {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .right-section {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .container {
+                padding: 5px;
+                padding-left: 15px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .degree .year-of-graduation {
+                display: none;
+            }
+
+            .hidden {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            header {
+                padding: 15px;
+            }
+            header h1.name{
+                font-size: 25px;
+            }
+
+            header .details{
+                font-size: 18px;
+            }
+
+            header .details .segment{
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 class="name">Eimantas Melnikas</h1>
-        <p class="details"><i class="fa fa-envelope" style="color: grey;"></i> eimantasmel@gmail.com  &nbsp;
-           <i class="fa fa-map-marker" aria-hidden="true" style="color: grey;"></i> Kaunas</p>
+        <p class="details">
+            <span class="segment">
+                <i class="fa fa-envelope" style="color: grey;"></i> eimantasmel@gmail.com  &nbsp;
+            </span>
+            <span class="segment">
+                <i class="fa fa-map-marker" aria-hidden="true" style="color: grey;"></i> Kaunas
+            </span>
+        </p>
     </header>
 
     <div class="container">
@@ -181,6 +249,7 @@
             <div class="left-section">
                 <div class="education">
                     <h3 class='title'>Education</h3>
+                    <p class="hidden"><b>Sep 2018 - Jun 2022</b></p>
                     <div class="degree">
                         <p class="bold">Bachelor's degree, Information system</p> 
                         <p class="year-of-graduation">Sep 2018 - Jun 2022</p>
@@ -191,6 +260,7 @@
             
                 <div class="education">
                     <h3 class='title'>Work Experience</h3>
+                    <p class="hidden"><b>Aug 2022 - May 2023</b></p>
                     <div class="degree">
                         <div style="width: 75%">
                             <p><b>Job Title: </b>Web Developer</p> 
@@ -236,12 +306,13 @@
                         Participating in soccer to foster teamwork and collaborative skills
                         <br><br><br>
 
-                        Here I am adding links to my presentational projects in both ASP.NET Core and Symfony:
-                        <br>
-                        ASP.NET Core: https://github.com/eimantasmel/DOTNET_RapidNoteFinder
-                        Symfony: https://github.com/eimantasmel/RapidNoteFinder
+                        Here I am adding links to my presentational project in both ASP.NET Core and Symfony:
+                        <br><br>    
+                        <a href="https://github.com/eimantasmel/DOTNET_RapidNoteFinder">ASP.NET Core</a>
+						<br>
+                        <a href="https://github.com/eimantasmel/RapidNoteFinder">Symfony</a>
                         <br><br>
-                        <b>LinkedIn Profile: </b>[Your LinkedIn URL]
+                        <a href="https://www.linkedin.com/in/eimantas-melnikas-09ab0b221">LinkedIn Profile</a>
 
                     </p>
                 </div>
